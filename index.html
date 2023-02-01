@@ -5,61 +5,20 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>JS Drum DEMO</title>
-  <link rel="stylesheet" href="./style.css">
+  <title>JS Clock DEMO</title>
+  <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="https://fav.farm/🔥" />
 </head>
 
 <body>
-  <div class="keys">
-    <div data-key="65" class="key">
-      <kbd>A</kbd>
-      <span class="sound">clap</span>
+  <div class="clock">
+    <img class="clock-pic" src="data:image/png;base64,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" alt="clock-pic">
+    <div class="clock-face">
+      <!-- objective, apply rotation to these 3 divs class hand -->
+      <div class="hand hour-hand"></div>
+      <div class="hand min-hand"></div>
+      <div class="hand second-hand"></div>
     </div>
-    <div data-key="83" class="key">
-      <kbd>S</kbd>
-      <span class="sound">hihat</span>
-    </div>
-    <div data-key="68" class="key">
-      <kbd>D</kbd>
-      <span class="sound">kick</span>
-    </div>
-    <div data-key="70" class="key">
-      <kbd>F</kbd>
-      <span class="sound">openhat</span>
-    </div>
-    <div data-key="71" class="key">
-      <kbd>G</kbd>
-      <span class="sound">boom</span>
-    </div>
-    <div data-key="72" class="key">
-      <kbd>H</kbd>
-      <span class="sound">ride</span>
-    </div>
-    <div data-key="74" class="key">
-      <kbd>J</kbd>
-      <span class="sound">snare</span>
-    </div>
-    <div data-key="75" class="key">
-      <kbd>K</kbd>
-      <span class="sound">tom</span>
-    </div>
-    <div data-key="76" class="key">
-      <kbd>L</kbd>
-      <span class="sound">tink</span>
-    </div>
-  </div>
-  <div class="audios">
-    <audio data-key="65" class="sound-file" src="sounds/clap.wav"></audio>
-    <audio data-key="83" class="sound-file" src="sounds/hihat.wav"></audio>
-    <audio data-key="68" class="sound-file" src="sounds/kick.wav"></audio>
-    <audio data-key="70" class="sound-file" src="sounds/openhat.wav"></audio>
-    <audio data-key="71" class="sound-file" src="sounds/boom.wav"></audio>
-    <audio data-key="72" class="sound-file" src="sounds/ride.wav"></audio>
-    <audio data-key="74" class="sound-file" src="sounds/snare.wav"></audio>
-    <audio data-key="75" class="sound-file" src="sounds/tom.wav"></audio>
-    <audio data-key="76" class="sound-file" src="sounds/tink.wav"></audio>
   </div>
 
   <script type="text/javascript" src="./main.js"></script>

@@ -18,9 +18,3 @@
 # Ignore all local history of files
 .history
 .ionide
-
-### sounds
-./sounds
-.sounds
-sounds/
-.sounds/
