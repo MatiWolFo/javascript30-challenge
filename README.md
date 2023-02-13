@@ -4,3 +4,4 @@
 - 02 - javascript new Date, getHours, getMinutes, getSeconds, setInterval
 - 03 - Playing with CSS Variables and JS
 - 04 - Array methods
+- 05 - flex + JS
