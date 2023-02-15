@@ -89,3 +89,54 @@ console.table(summary);
 // create a new array of unique values
 const uniqueArray = [...new Set(data)];
 console.table(uniqueArray);
+
+
+
+const sentences = ["alice and bob love leetcode", "i think so too", "this is great thanks very much"]
+
+const minMaxFound = (sentences) => {
+
+    let min = 100;
+    let max = 0;
+
+    for (let index = 0; index < sentences.length; index++) {
+        let wordCount = sentences[index].split(' ').length;
+        min = Math.min(wordCount, min)
+        max = Math.max(wordCount, max)
+    }
+    return { min: min, max: max };
+};
+
+console.table(minMaxFound(sentences));
+
+// 1. ordenar arrays sin usar sort
+
+// const sortedArray = array2.sort((a, b) => {
+//     return a - b
+// });
+// console.log(sortedArray);
+
+// BIG O NOTATION
+
+const array1 = [12, 9, 1, 8, 7];
+// const array2 = [3, 6, 20, 1, -1];
+// const array3 = [12, 9, 1, 8, 7];
+
+function sortArray(array) {
+    for (let i = 0; i < array.length; i++) {
+        for (let j = i + 1; j < array.length; j++) {
+            console.log(`BEFORE i= ${i}; j= ${j}; array[j] = ${array[j]}: array[i] = ${array[i]}; array ${array}`);
+            if (array[j] > array[i]) {
+                console.log('cumple');
+                temp = array[j]
+                array[j] = array[i]
+                array[i] = temp
+            }
+            console.log(`AFTER i= ${i}; j= ${j}; array[j] = ${array[j]}: array[i] = ${array[i]}; array ${array}`);
+            console.log('==================');
+        }
+    }
+}
+sortArray(array1)
+// sortArray(array2)
+// sortArray(array3)
