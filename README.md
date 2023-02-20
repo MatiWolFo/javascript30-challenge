@@ -1,3 +1,3 @@
 # javascript30-challenge
 
-- 04-Array methods
+- 06 - Array methods 2
