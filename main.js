@@ -140,3 +140,36 @@ function sortArray(array) {
 sortArray(array1)
 // sortArray(array2)
 // sortArray(array3)
+
+// ARRAY CARDIO 2
+
+const arr1 = [
+    { name: 'Wes', year: 1988 },
+    { name: 'Kait', year: 1986 },
+    { name: 'Irv', year: 1970 },
+    { name: 'Lux', year: 2015 }
+];
+
+// METODO SOME
+const isAdult = arr1.some(person => ((new Date().getFullYear()) - person.year) >= 18);
+console.table({isAdult});
+
+// METODO EVERY
+const allAdult = arr1.every(person => ((new Date().getFullYear()) - person.year) >= 18);
+console.table({allAdult});
+
+
+const arr2 = [
+    { text: 'Love this!', id: 523423 },
+    { text: 'Super good', id: 823423 },
+    { text: 'You are the best', id: 2039842 },
+    { text: 'Ramen is my fav food ever', id: 123523 },
+    { text: 'Nice Nice Nice!', id: 542328 }
+];
+
+// METODO FIND y FINDINDEX
+const comment = arr2.find(comment => comment.id === 123523)
+console.table(comment);
+
+const index = arr2.findIndex(comment => comment.id === 123523);
+console.log(index);
